@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projeto3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tabcontainer">
+        <nav class="tabs">
+            <a class="tablink" href="missao.html">Missão</a>
+            <a class="tablink" href="projeto1.html">Scratch</a>
+            <a class="tablink" href="projeto2.html">Python</a>
+            <a class="tablink active" href="projeto3.html">JavaScript</a>
+        </nav>
+
+    </div>
+
+
+ <!-- Botões com função genérica exibirconteudo() -->
+ <button id="btnintroducao" onclick="exibirconteudo('introducao')" class="btn-custom">Conhecendo a linguagem</button>
+ <button id="btnpokemon" onclick="exibirconteudo('pokemon')" class="btn-custom">Criando uma Pokédex</button>
+ <button id="btntutorial2" onclick="exibirconteudo('Tutorial2JS')" class="btn-custom">Contador</button>
+ <button id="btntutorial3" onclick="exibirconteudo('Tutorial3JS')" class="btn-custom">Trocar Cores</button>
+
+ <!-- Conteúdos a serem exibidos/ocultados -->
+  <div id="introducao" style="display: none;">
+     <p>Você já se perguntou como os jogos online, aplicativos e sites que você usa todos os dias funcionam? Por trás de tudo isso, existem linguagens de programação, que são como as instruções que os computadores seguem para fazer as coisas acontecerem na tela.
+
+     Uma dessas linguagens muito importantes na programação é o JavaScript. Com ela, você pode criar coisas incríveis e interativas na internet, como jogos, animações e muito mais. 
+     
+     Por isso, vamos juntos descobrir o que é o JavaScript e como ele funciona, para que logo logo você possa usar com maestria tudo o que ela tem a oferecer para os seus futuros projetos.</p>
+
+     <h3>O que é JavaScript?</h3>
+
+     <p>JavaScript é uma linguagem de programação super divertida e poderosa, usada para dar vida às páginas da internet! Com ela, você pode fazer sites interativos, animados e muito legais. Sabe quando você clica em um botão e algo acontece na página? Ou quando um jogo online responde aos seus comandos? Muitas dessas coisas acontecem por causa do JavaScript.</p>
+
+     <h3>Onde o JavaScript é usado?</h3>
+     <ul>
+         <li><strong>Sites interativos:</strong> JavaScript ajuda a criar efeitos legais em sites, como mudar cores, exibir mensagens ou até fazer animações!</li>
+
+         <li><strong>Jogos na web:</strong> Dá para criar jogos que funcionam diretamente no navegador, sem precisar baixar nada.</li>
+
+         <li><strong>Aplicativos da Web:</strong> Programas como calculadoras e calendários online são feitos com JavaScript.</li>
+
+         <li><strong>Robôs e gadgets:</strong> Sabia que alguns robôs e dispositivos inteligentes também podem ser programados usando JavaScript?</li>
+     </ul>
+
+     <p>O JavaScript é como uma ferramenta mágica que os programadores usam para deixar a internet mais divertida e interativa. E o melhor de tudo: você também pode aprender a usar dessa magia!</p>
+ </div>
+
+ <div id="pokemon" style="display: none;">
+     <h3>Vamos criar nossa própria Pokédex!</h3>
+
+     <p>Você já sonhou em viajar pelo mundo vivendo aventuras como um verdadeiro mestre Pokémon? 
+         
+     Neste projeto, vamos criar uma Pokédex digital, onde você poderá buscar e visualizar informações de seus Pokémon favoritos. Utilizando HTML, CSS e JavaScript, vamos juntos dar vida a um site interativo que faz tudo isso acontecer.
+         
+     Se prepare, porque sua jornada como um programador Pokémon começa agora!</p>
+
+     <h3>Material Necessário</h3>
+     <ul>
+         <li>
+             <strong>Editor de Código: Visual Studio Code</strong><br>
+             Descrição: O Visual Studio Code é um editor de código poderoso e fácil de usar. Ele ajuda você a escrever, editar e testar seu código de forma simples.<br>
+             <a href="https://code.visualstudio.com/" target="_blank">Baixar Visual Studio Code</a><br>
+             <strong>Como Baixar e Instalar:</strong><br>
+             <ol>
+                 <li>**Acesse o Site do Visual Studio Code**: Primeiro, você precisa ir para o site oficial do Visual Studio Code. Clique no link acima para acessar.</li>
+
+                 <li>**Escolha a Versão para o Seu Sistema**: Na página, você verá opções de download para diferentes sistemas operacionais. Clique no botão que corresponde ao seu sistema.</li>
+
+                 <li>**Baixe o Instalador**: O download do instalador começará automaticamente e será salvo na sua pasta de downloads.</li>
+
+                 <li>**Instale o Visual Studio Code**:
+                     <ul>
+                         <li>**Windows**: Clique duas vezes no arquivo baixado e siga as instruções na tela.</li>
+                         <li>**macOS**: Abra o arquivo .dmg e arraste o ícone do Visual Studio Code para a pasta "Aplicativos".</li>
+                         <li>**Linux**: Siga as instruções específicas para sua distribuição no site.</li>
+                     </ul>
+                 </li>
+
+                 <li>**Abra o Visual Studio Code**: Depois de instalado, abra o programa clicando no ícone.</li>
+
+                 <li>**Explore e Divirta-se**: Agora que você tem o Visual Studio Code instalado, explore suas ferramentas e comece a escrever seu código!</li>
+             </ol>
+         </li>
+
+         <li>
+             <strong>API Pokémon: PokéAPI</strong><br>
+             Descrição: A PokéAPI é uma fonte de dados que fornece informações sobre Pokémon. Usaremos essa API para buscar dados como nomes, tipos e imagens dos Pokémon.<br>
+             <a href="https://pokeapi.co/" target="_blank">Visitar a página da PokéAPI</a>
+         </li>
+     </ul>
+
+     <h3>Começando a Desenvolver nossa Pokédex</h3>
+     <p>Agora que você já conhece a nossa missão, vamos colocar a mão na massa e criar uma Pokédex incrível! Primeiro, precisamos garantir que tudo está pronto para começarmos a programar. Vamos lá!</p>
+
+     <ol>
+         <li>
+             <strong>Preparando o Terreno</strong><br>
+             Antes de começarmos a aventura, precisamos garantir que temos tudo que precisamos. Primeiro, certifique-se de que você instalou o <strong>Visual Studio Code</strong> no seu computador e que tem acesso à <strong>PokéAPI</strong> para pegar as informações dos Pokémon.
+         </li>
+
+         <li>
+             <strong>Criando Nossos Arquivos</strong><br>
+             Vamos organizar nosso projeto! No Visual Studio Code, siga estas etapas:<br>
+             <ul>
+                 <li>
+                     <strong>Crie uma nova pasta</strong> chamada "Pokedex" no seu computador. Pense nela como sua caixa de ferramentas!
+                 </li>
+
+                 <li>
+                     <strong>Dentro dessa pasta</strong>, crie três arquivos importantes, pode deixar eles em branco por enquanto.
+                     <ul>
+                         <li><code>index.html</code>: Aqui é onde nossa Pokédex vai ganhar vida!</li>
+                         <li><code>styles.css</code>: Neste arquivo, você vai adicionar cores e estilos legais para deixar sua Pokédex ainda mais bonita.</li>
+                         <li><code>script.js</code>: Este é o lugar onde você vai escrever o código mágico que vai buscar os dados dos Pokémon.</li>
+                     </ul>
+                 </li>
+             </ul>
+         </li>
+
+         <li>
+             <strong>Estrutura Básica do HTML</strong><br>
+             Vamos começar pelo arquivo <code>index.html</code>. Abra esse arquivo e adicione a estrutura básica do HTML. Aqui está um exemplo para você:
+
+             <pre>
+                 &lt;!DOCTYPE html&gt;
+                 &lt;html lang="pt-BR"&gt;
+                     &lt;head&gt;
+                         &lt;meta charset="UTF-8"&gt;
+                         &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                         &lt;title&gt;Pokédex&lt;/title&gt;
+                         &lt;link rel="stylesheet" href="styles.css"&gt;
+                     &lt;/head&gt;
+                     &lt;body&gt;
+                         &lt;h1&gt;Bem-vindo à Pokédex!&lt;/h1&gt;
+                         &lt;div id="pokemon-list"&gt;&lt;/div&gt;
+                         &lt;script src="script.js"&gt;&lt;/script&gt;
+                     &lt;/body&gt;
+                 &lt;/html&gt;
+             </pre>
+         </li>
+
+         <li>
+             <strong>Deixando Bonito com CSS</strong><br>
+             Agora, vamos estilizar nossa Pokédex! Abra o arquivo <code>styles.css</code> e adicione alguns estilos. Aqui está um exemplo básico para você começar:
+
+             <pre>
+                 body {
+                     font-family: Arial, sans-serif;
+                     background-color: #f0f0f0;
+                     color: #333;
+                 }
+                 
+                 h1 {
+                     text-align: center;
+                 }
+                 
+                 #pokemon-list {
+                     display: flex;
+                     flex-wrap: wrap;
+                     justify-content: center;
+                 }
+             </pre>
+         </li>
+
+         <li>
+             <strong>Mágica do JavaScript</strong><br>
+             Agora vem a parte mais legal: o JavaScript! No arquivo <code>script.js</code>, você vai escrever o código que buscará as informações dos Pokémon. Aqui está um exemplo inicial para você usar:
+
+             <pre>
+                 fetch('https://pokeapi.co/api/v2/pokemon?limit=10')
+                     .then(response => response.json())
+                     .then(data => {
+                         const pokemonList = document.getElementById('pokemon-list');
+                         data.results.forEach(pokemon => {
+                             const div = document.createElement('div');
+                             div.textContent = pokemon.name;
+                             pokemonList.appendChild(div);
+                         });
+                     })
+                     .catch(error => console.error('Erro:', error));
+             </pre>
+         </li>
+
+         <li>
+             <strong>Hora de Testar!</strong><br>
+             Depois de adicionar o código, salve todos os arquivos e abra o <code>index.html</code> no seu navegador. Você deve ver a lista de Pokémon aparecendo na tela!
+         </li>
+     </ol>
+ </div>
+
+
+ <div id="Tutorial2JS" style="display: none;">
+
+    <h3>Passo 1: Configurar o ambiente</h3>
+    <p>
+        Para este projeto simples, você só precisará de um navegador e um editor de texto (como o Notepad, VSCode ou qualquer outro de sua escolha). Não é necessário instalar nada adicional, pois o JavaScript já é compatível com todos os navegadores modernos.
+    </p>
+
+    <h3>Passo 2: Criar o arquivo HTML</h3>
+    <p>
+        Vamos começar criando um arquivo HTML que servirá de estrutura para o contador:
+    </p>
+    <p>
+        1. Abra o editor de texto.<br>
+        2. Crie um arquivo novo e salve-o como <strong>"contador.html"</strong>.
+    </p>
+    <p>
+        Dentro desse arquivo, adicione o seguinte código HTML básico:
+    </p>
+
+    <pre>
+    <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="pt-BR"&gt;
+    &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Contador em JavaScript&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+    &lt;h1&gt;Contador Simples&lt;/h1&gt;
+    &lt;p id="contador"&gt;0&lt;/p&gt;
+
+    &lt;button onclick="incrementar()"&gt;Incrementar&lt;/button&gt;
+    &lt;button onclick="decrementar()"&gt;Decrementar&lt;/button&gt;
+
+    &lt;script src="contador.js"&gt;&lt;/script&gt;
+
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </code>
+    </pre>
+
+    <p>
+        Esse código cria uma estrutura simples com um título, um parágrafo onde o número do contador será exibido e dois botões: um para incrementar e outro para decrementar o contador.
+    </p>
+
+    <h3>Passo 3: Criar o arquivo JavaScript</h3>
+    <p>
+        Agora vamos criar o arquivo JavaScript que vai controlar o funcionamento do contador:
+    </p>
+    <p>
+        1. No mesmo diretório onde você salvou o arquivo HTML, crie um novo arquivo e salve-o com o nome <strong>"contador.js"</strong>.<br>
+        2. Dentro desse arquivo, adicione o seguinte código JavaScript:
+    </p>
+
+    <pre>
+    <code>
+    // Inicializa o valor do contador
+    let contador = 0;
+
+    // Função para incrementar o valor
+    function incrementar() {
+    contador++;
+    document.getElementById("contador").innerText = contador;
+    }
+
+    // Função para decrementar o valor
+    function decrementar() {
+    contador--;
+    document.getElementById("contador").innerText = contador;
+    }
+    </code>
+    </pre>
+
+    <p>
+        Aqui está o que este código faz:
+        <ul>
+            <li><strong>let contador = 0</strong>: Inicializa o contador com o valor 0.</li>
+            <li><strong>incrementar()</strong>: Função que aumenta o valor do contador em 1 e atualiza o texto exibido na página.</li>
+            <li><strong>decrementar()</strong>: Função que diminui o valor do contador em 1 e também atualiza o texto na página.</li>
+        </ul>
+    </p>
+
+    <h3>Passo 4: Testar o contador</h3>
+    <p>
+        Agora que você tem o código HTML e JavaScript prontos, vamos testar o contador:
+    </p>
+    <p>
+        1. Abra o arquivo <strong>contador.html</strong> em um navegador (Google Chrome, Firefox, etc.).<br>
+        2. Você verá o número <strong>0</strong> no centro da tela, com dois botões: um para incrementar e outro para decrementar.<br>
+        3. Clique nos botões e observe o número mudando conforme você interage com o contador.
+    </p>
+
+    <h3>Passo 5: Melhorias adicionais</h3>
+    <p>
+        Agora que o contador básico está funcionando, aqui estão algumas ideias para expandir o projeto:
+    </p>
+    <p>
+        - Adicionar um botão de "reset" para voltar o contador a 0.<br>
+        - Definir limites para o contador, como não permitir valores negativos.<br>
+        - Alterar o estilo do contador, mudando cores e tamanhos de fonte para personalizar a aparência.
+    </p>
+
+    <hr>
+
+    <p>
+        Pronto! Você criou um contador simples em JavaScript. Divirta-se testando e melhorando o código!
+    </p>
+
+ </div>
+
+
+ <div id="Tutorial3JS" style="display: none;">
+
+
+    <h3>Passo 1: Configurar o ambiente</h3>
+    <p>
+        Assim como no contador, você só precisará de um navegador e de um editor de texto (como Notepad, VSCode ou outro de sua escolha). Não há necessidade de instalar nada, pois o JavaScript é compatível com todos os navegadores modernos.
+    </p>
+
+    <h3>Passo 2: Criar o arquivo HTML</h3>
+    <p>
+        Vamos começar criando um arquivo HTML para ser a base do nosso trocador de cores. Siga os passos abaixo:
+    </p>
+    <p>
+        1. Abra seu editor de texto.<br>
+        2. Crie um arquivo novo e salve-o com o nome <strong>"trocador_cores.html"</strong>.
+    </p>
+    <p>
+        Adicione o seguinte código básico de HTML dentro do arquivo:
+    </p>
+
+    <pre>
+    <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Trocador de Cores em JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;Trocador de Cores&lt;/h1&gt;
+
+    &lt;button onclick="trocarCor()"&gt;Trocar Cor&lt;/button&gt;
+
+    &lt;script src="trocador_cores.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+    </code>
+    </pre>
+
+    <p>
+        Esse código cria uma página HTML simples com um título e um botão. O botão irá ativar a função JavaScript para trocar a cor de fundo.
+    </p>
+
+    <h3>Passo 3: Criar o arquivo JavaScript</h3>
+    <p>
+        Agora vamos criar o arquivo JavaScript que vai definir a função de trocar a cor de fundo. Siga os passos:
+    </p>
+    <p>
+        1. No mesmo diretório onde você salvou o arquivo HTML, crie um novo arquivo e salve-o com o nome <strong>"trocador_cores.js"</strong>.<br>
+        2. Adicione o seguinte código no arquivo JavaScript:
+    </p>
+
+    <pre>
+    <code>
+function gerarCorAleatoria() {
+    const letras = '0123456789ABCDEF';
+    let cor = '#';
+    for (let i = 0; i &lt; 6; i++) {
+        cor += letras[Math.floor(Math.random() * 16)];
+    }
+    return cor;
+}
+
+function trocarCor() {
+    const corAleatoria = gerarCorAleatoria();
+    document.body.style.backgroundColor = corAleatoria;
+}
+    </code>
+    </pre>
+
+    <p>
+        Explicando o código:
+        <ul>
+            <li><strong>gerarCorAleatoria()</strong>: Gera uma cor hexadecimal aleatória (como "#FF5733").</li>
+            <li><strong>trocarCor()</strong>: Muda a cor de fundo do <strong>body</strong> do documento para a cor gerada.</li>
+        </ul>
+    </p>
+
+    <h3>Passo 4: Testar o trocador de cores</h3>
+    <p>
+        Agora que temos o código HTML e JavaScript configurado, vamos testar o trocador de cores:
+    </p>
+    <p>
+        1. Salve ambos os arquivos (<strong>trocador_cores.html</strong> e <strong>trocador_cores.js</strong>).<br>
+        2. Abra o arquivo <strong>trocador_cores.html</strong> em um navegador.<br>
+        3. Clique no botão "Trocar Cor" e observe a cor de fundo mudando para uma cor aleatória sempre que clicar.
+    </p>
+
+    <h3>Passo 5: Melhorias adicionais</h3>
+    <p>
+        Agora que o trocador de cores básico está funcionando, aqui estão algumas ideias para expandir o projeto:
+    </p>
+    <p>
+        - Adicionar mais botões para escolher entre diferentes paletas de cores (por exemplo, cores pastel, cores vibrantes).<br>
+        - Mostrar o código da cor atual em um elemento de texto na página.<br>
+        - Definir um intervalo para que as cores mudem automaticamente a cada poucos segundos.
+    </p>
+
+    <hr>
+
+    <p>
+        Pronto! Agora você tem um trocador de cores em JavaScript. Sinta-se à vontade para personalizá-lo e adicionar mais funcionalidades!
+    </p>
+</div>
+
+<script>
+    // Função para exibir um conteúdo e esconder os outros
+    function exibirconteudo(id) {
+        var conteudos = document.querySelectorAll("#introducao, #pokemon, #Tutorial2SCRT, #Tutorial3SCRT");
+
+        conteudos.forEach(function(conteudo) {
+            conteudo.style.display = "none"; 
+        });
+
+        var elemento = document.getElementById(id);
+
+        if (elemento.style.display === "none" || elemento.style.display === "") {
+            elemento.style.display = "block";
+        }
+    }
+
+    // Aciona o evento Javascript para carregar o conteúdo inicial da página
+    document.addEventListener("DOMContentLoaded", function(event) {
+        var element = document.getElementById("btnintroducao");
+        element.classList.add("active_nav"); 
+
+        exibirconteudo('introducao');
+
+        let allBtns = document.querySelectorAll("button")
+
+        // For each button, register an event listener
+        allBtns.forEach(function(elem){
+
+            elem.addEventListener("click", function(e){
+
+                // On click, remove the MyClass on ALL buttons
+                allBtns.forEach(function(el){
+                    el.classList.remove("active_nav");
+                });
+
+                // Add the class on clicked one
+                e.target.classList.add("active_nav");
+            })
+        })
+    });
+</script>
+
+
+
+    
+    <footer>
+        <p>&copy; 2024 Dijerran Perretto.</p>
+    </footer>
+
+       
+
+</body>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projeto2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tabcontainer">
+        <nav class="tabs">
+            <a class="tablink" href="missao.html">Missão</a>
+            <a class="tablink" href="projeto1.html">Scratch</a>
+            <a class="tablink active" href="projeto2.html">Python</a>
+            <a class="tablink" href="projeto3.html">JavaScript</a>
+        </nav>
+    </div>
+
+    <!-- Botões com função genérica exibirconteudo() -->
+    <button id="btnFerramentaPY" onclick="exibirconteudo('FerramentaPY')" class="btn-custom">Conhecendo a ferramenta</button>
+    <button id="btnCalculadora" onclick="exibirconteudo('Calculadora')" class="btn-custom">Calculadora</button>
+    <button id="btnTutorial2PY" onclick="exibirconteudo('Tutorial2PY')" class="btn-custom">Pedra Papel Tesoura</button>
+    <button id="btnTutorial3PY" onclick="exibirconteudo('Tutorial3PY')" class="btn-custom">Gerador de Senhas</button>
+
+    <div id="FerramentaPY" style="display: none;">
+        <h2>O que é Python?</h2>
+
+  <p>Python é como uma linguagem de programação, mas pense nela como um idioma que você usa para dar instruções a um computador. É como se você estivesse escrevendo um conjunto de instruções para um amigo, mas em vez de usar palavras do dia a dia, você usa palavras especiais que o computador entende.</p>
+
+  <p>Com Python, você pode fazer coisas incríveis como:</p>
+
+  <ul>
+    <li><strong>Criar jogos:</strong> Imagine construir um jogo de corrida ou um jogo de aventura!</li>
+    <li><strong>Desenvolver aplicativos:</strong> Você pode criar aplicativos para celular ou para o computador.</li>
+    <li><strong>Analisar dados:</strong> Você pode usar Python para entender grandes conjuntos de dados, como dados de vendas ou pesquisas.</li>
+    <li><strong>Automatizar tarefas:</strong> Imagine que você precisa fazer a mesma coisa várias vezes, como enviar emails. Python pode fazer isso automaticamente para você!</li>
+  </ul>
+
+  <p>O legal do Python é que ele é <strong>fácil de aprender</strong> e <strong>muito versátil</strong>, o que significa que você pode usá-lo para muitas coisas diferentes.</p>
+
+    </div>
+
+    <div id="Calculadora" style="display: none;">
+        <h3>Passo 1: Instalar o Python</h3>
+
+        <p>
+        Se ainda não tem o Python instalado no seu computador, siga os passos abaixo:
+        1. Acesse o site oficial do Python em <a href="https://www.python.org/downloads/">python.org</a>.<br>
+        2. Faça o download da versão mais recente e siga as instruções de instalação.<br>
+        3. Durante a instalação, certifique-se de marcar a opção "Add Python to PATH" para facilitar o uso.
+        </p>
+        
+        <h3>Passo 2: Criar o arquivo da calculadora</h3>
+        
+        <p>
+        Agora que o Python está instalado, vamos criar um arquivo para nossa calculadora:
+        1. Abra um editor de texto simples (como o Notepad, VSCode ou qualquer outro de sua preferência).<br>
+        2. Crie um arquivo e salve-o com o nome <strong>"calculadora.py"</strong>. A extensão <strong>.py</strong> é usada para arquivos Python.
+        </p>
+        
+        <h3>Passo 3: Estrutura básica da calculadora</h3>
+        
+        <p>
+        Vamos começar criando a estrutura básica da nossa calculadora:
+        1. No arquivo <strong>calculadora.py</strong>, copie e cole o código abaixo para começar:
+        </p>
+        
+        ```python
+        def somar(x, y):
+            return x + y
+        
+        def subtrair(x, y):
+            return x - y
+        
+        def multiplicar(x, y):
+            return x * y
+        
+        def dividir(x, y):
+            if y != 0:
+                return x / y
+            else:
+                return "Erro: Divisão por zero não é permitida"
+    
+        
+    <p> Neste código, criamos quatro funções para as operações básicas: - <strong>somar</strong>: Soma dois números. - <strong>subtrair</strong>: Subtrai o segundo número do primeiro. - <strong>multiplicar</strong>: Multiplica dois números. - <strong>dividir</strong>: Divide o primeiro número pelo segundo (com verificação para divisão por zero). </p> <h3>Passo 4: Adicionar o menu de opções</h3> <p> Agora, vamos criar um menu para o usuário escolher qual operação deseja realizar. Adicione o seguinte código após as funções: </p>
+
+
+    <p>print("Selecione a operação:")
+    print("1. Soma")
+    print("2. Subtração")
+    print("3. Multiplicação")
+    print("4. Divisão")
+    
+    # Solicitar entrada do usuário
+    escolha = input("Digite sua escolha (1/2/3/4): ")
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))</p>
+
+
+    <p> Este trecho do código faz o seguinte: - Exibe um menu com as quatro operações básicas. - Pede para o usuário digitar a operação desejada. - Recebe dois números do usuário para realizar a operação. </p> <h3>Passo 5: Executar a operação escolhida</h3> <p> Agora, vamos adicionar a lógica para executar a operação escolhida pelo usuário. Adicione o seguinte código: </p>
+    
+    <p>if escolha == '1':
+        print(f"{num1} + {num2} = {somar(num1, num2)}")
+    
+    elif escolha == '2':
+        print(f"{num1} - {num2} = {subtrair(num1, num2)}")
+    
+    elif escolha == '3':
+        print(f"{num1} * {num2} = {multiplicar(num1, num2)}")
+    
+    elif escolha == '4':
+        print(f"{num1} / {num2} = {dividir(num1, num2)}")
+    
+    else:
+        print("Opção inválida")
+    </p>
+
+    <p> Este trecho do código verifica qual operação o usuário escolheu e executa a função correspondente, mostrando o resultado no final. Se o usuário digitar uma opção que não seja válida, será exibida uma mensagem de erro. </p> <h3>Passo 6: Executar a calculadora</h3> <p> Agora que nossa calculadora está pronta, é hora de testá-la: 1. Salve o arquivo <strong>calculadora.py</strong>. 2. Abra o terminal (ou prompt de comando) e navegue até a pasta onde você salvou o arquivo. 3. Execute o arquivo digitando o seguinte comando no terminal: </p>
+
+    <p>python calculadora.py</p>
+
+
+    <p> Isso vai rodar o seu programa e você poderá usar a calculadora digitando os números e escolhendo a operação que deseja realizar. </p> <h3>Passo 7: Melhorias adicionais</h3> <p> Agora que você tem uma calculadora funcional, aqui estão algumas ideias para melhorá-la: - Permitir que o usuário faça várias operações seguidas sem precisar reiniciar o programa. - Adicionar suporte para operações como potência, raiz quadrada, ou cálculos percentuais. - Melhorar a verificação de erros, como entradas inválidas (ex: letras em vez de números). </p> <hr> <p> 
+
+
+    </div>
+
+    <div id="Tutorial2PY" style="display: none;">
+       
+    <h3>Passo 2: Criar o arquivo do jogo</h3>
+    <p>
+        Vamos criar o arquivo onde o código do jogo será escrito. Siga os passos:
+    </p>
+    <p>
+        1. Abra um editor de texto simples (pode ser o Notepad, VSCode ou qualquer outro de sua preferência).<br>
+        2. Crie um arquivo novo e salve-o com o nome <strong>"pedra_papel_tesoura.py"</strong>. Certifique-se de usar a extensão <strong>.py</strong>.
+    </p>
+
+    <h3>Passo 3: Importar o módulo "random"</h3>
+    <p>
+        O jogo "Pedra, Papel e Tesoura" precisa de uma forma de escolher aleatoriamente a jogada do computador. Para isso, usaremos o módulo <strong>random</strong>. No início do arquivo, adicione o seguinte código:
+    </p>
+
+    <pre>
+    <code>import random</code>
+    </pre>
+
+    <h3>Passo 4: Criar a lógica do jogo</h3>
+    <p>
+        Vamos agora criar a lógica principal do jogo. Você precisará de uma função para determinar o vencedor com base nas escolhas do jogador e do computador. Adicione o seguinte código:
+    </p>
+
+    <pre>
+    <code>
+# Função que decide o vencedor
+def determinar_vencedor(jogador, computador):
+    if jogador == computador:
+        return "Empate!"
+    elif (jogador == "pedra" and computador == "tesoura") or \
+         (jogador == "papel" and computador == "pedra") or \
+         (jogador == "tesoura" and computador == "papel"):
+        return "Você ganhou!"
+    else:
+        return "Você perdeu!"
+    </code>
+    </pre>
+
+    <p>
+        A função <strong>determinar_vencedor</strong> recebe as escolhas do jogador e do computador e retorna quem foi o vencedor. Ela compara as combinações possíveis de vitória para o jogador e decide o resultado.
+    </p>
+
+    <h3>Passo 5: Criar a escolha do computador</h3>
+    <p>
+        Agora precisamos fazer o computador escolher entre "pedra", "papel" ou "tesoura" de forma aleatória. Para isso, vamos usar o módulo <strong>random</strong>. Adicione o seguinte código:
+    </p>
+
+    <pre>
+    <code>
+# Possíveis escolhas
+opcoes = ["pedra", "papel", "tesoura"]
+
+# Escolha aleatória do computador
+computador = random.choice(opcoes)
+    </code>
+    </pre>
+
+    <p>
+        O código acima cria uma lista com as opções "pedra", "papel" e "tesoura" e usa a função <strong>random.choice()</strong> para escolher aleatoriamente uma dessas opções para o computador.
+    </p>
+
+    <h3>Passo 6: Obter a escolha do jogador</h3>
+    <p>
+        Agora precisamos pedir ao jogador que faça sua escolha. Adicione o seguinte código para capturar a entrada do jogador:
+    </p>
+
+    <pre>
+    <code>
+# Solicitar a escolha do jogador
+jogador = input("Escolha pedra, papel ou tesoura: ").lower()
+    </code>
+    </pre>
+
+    <p>
+        Esse código solicita ao jogador que digite sua escolha. O método <strong>.lower()</strong> é usado para garantir que a escolha do jogador seja comparada em letras minúsculas, facilitando a verificação.
+    </p>
+
+    <h3>Passo 7: Mostrar os resultados</h3>
+    <p>
+        Depois de capturar as escolhas do jogador e do computador, podemos determinar o vencedor e mostrar o resultado. Adicione o seguinte código:
+    </p>
+
+    <pre>
+    <code>
+# Mostrar as escolhas
+print(f"Você escolheu: {jogador}")
+print(f"O computador escolheu: {computador}")
+
+# Determinar o vencedor
+resultado = determinar_vencedor(jogador, computador)
+
+# Exibir o resultado
+print(resultado)
+    </code>
+    </pre>
+
+    <p>
+        Esse trecho de código exibe as escolhas de ambos e depois utiliza a função <strong>determinar_vencedor</strong> para decidir o resultado e exibir quem ganhou ou se foi empate.
+    </p>
+
+    <h3>Passo 8: Executar o jogo</h3>
+    <p>
+        Agora que o código do jogo está completo, vamos rodá-lo:
+    </p>
+    <p>
+        1. Salve o arquivo <strong>pedra_papel_tesoura.py</strong>.<br>
+        2. Abra o terminal (ou prompt de comando) e navegue até a pasta onde você salvou o arquivo.<br>
+        3. Execute o jogo digitando o seguinte comando no terminal:
+    </p>
+
+    <pre>
+    <code>python pedra_papel_tesoura.py</code>
+    </pre>
+
+    <p>
+        Agora você pode jogar "Pedra, Papel e Tesoura" contra o computador!
+    </p>
+
+    <h3>Passo 9: Melhorias adicionais</h3>
+    <p>
+        Aqui estão algumas sugestões para melhorar o jogo:
+    </p>
+    <p>
+        - Permitir que o jogador jogue várias rodadas sem precisar reiniciar o jogo.<br>
+        - Contabilizar a pontuação de vitórias, derrotas e empates.<br>
+        - Adicionar uma opção para o jogador sair do jogo digitando "sair".
+    </p>
+
+    <hr>
+
+    <p>
+        Pronto! Você criou o jogo "Pedra, Papel e Tesoura" em Python. Divirta-se jogando e explorando mais possibilidades para melhorar o jogo.
+    </p>
+
+
+    </div>
+
+    <div id="Tutorial3PY" style="display: none;">
+        
+        <h3>Passo 2: Criar o arquivo do gerador de senhas</h3>
+        <p>
+            Agora que o Python está instalado, vamos criar o arquivo onde o código do gerador de senhas será escrito:
+        </p>
+        <p>
+            1. Abra um editor de texto (pode ser o Notepad, VSCode ou qualquer outro de sua preferência).<br>
+            2. Crie um arquivo novo e salve-o com o nome <strong>"gerador_senhas.py"</strong>.
+        </p>
+    
+        <h3>Passo 3: Importar os módulos necessários</h3>
+        <p>
+            Vamos usar o módulo <strong>random</strong> para escolher caracteres aleatórios e o módulo <strong>string</strong> para pegar listas de caracteres (letras e números). Adicione o seguinte código ao início do arquivo:
+        </p>
+    
+        <pre>
+        <code>import random
+    import string</code>
+        </pre>
+    
+        <p>
+            O módulo <strong>random</strong> nos permite gerar elementos aleatórios, e o módulo <strong>string</strong> contém conjuntos de caracteres, como letras e números, que serão usados na senha.
+        </p>
+    
+        <h3>Passo 4: Definir o comprimento da senha</h3>
+        <p>
+            Vamos permitir que o usuário escolha o comprimento da senha. Para isso, adicione o seguinte código para solicitar esse valor:
+        </p>
+    
+        <pre>
+        <code>
+    # Solicitar o comprimento da senha
+    comprimento = int(input("Digite o comprimento da senha: "))
+        </code>
+        </pre>
+    
+        <p>
+            Esse código solicita ao usuário que informe quantos caracteres a senha deve ter. O <strong>int()</strong> converte a entrada em um número inteiro.
+        </p>
+    
+        <h3>Passo 5: Definir os caracteres disponíveis</h3>
+        <p>
+            Agora precisamos definir quais tipos de caracteres estarão disponíveis para a senha. Vamos usar letras minúsculas, letras maiúsculas, números e símbolos. Adicione o seguinte código:
+        </p>
+    
+        <pre>
+        <code>
+    # Definir os caracteres disponíveis para a senha
+    caracteres = string.ascii_letters + string.digits + string.punctuation
+        </code>
+        </pre>
+    
+        <p>
+            O código acima combina três conjuntos de caracteres:
+        </p>
+        <ul>
+            <li><strong>string.ascii_letters</strong>: todas as letras maiúsculas e minúsculas.</li>
+            <li><strong>string.digits</strong>: todos os números de 0 a 9.</li>
+            <li><strong>string.punctuation</strong>: todos os símbolos (como !, @, #, etc).</li>
+        </ul>
+    
+        <h3>Passo 6: Gerar a senha</h3>
+        <p>
+            Agora vamos gerar a senha escolhendo aleatoriamente caracteres da lista de <strong>caracteres</strong> com base no comprimento informado pelo usuário. Adicione o seguinte código:
+        </p>
+    
+        <pre>
+        <code>
+    # Gerar a senha aleatória
+    senha = ''.join(random.choice(caracteres) for i in range(comprimento))
+        </code>
+        </pre>
+    
+        <p>
+            Esse código faz o seguinte:
+            <ul>
+                <li><strong>random.choice(caracteres)</strong> escolhe um caractere aleatório da lista de caracteres.</li>
+                <li>A expressão <strong>for i in range(comprimento)</strong> repete isso até que a senha tenha o comprimento desejado.</li>
+                <li><strong>''.join()</strong> junta todos os caracteres escolhidos em uma única string.</li>
+            </ul>
+        </p>
+    
+        <h3>Passo 7: Exibir a senha gerada</h3>
+        <p>
+            Agora que a senha foi gerada, vamos exibi-la para o usuário. Adicione o seguinte código:
+        </p>
+    
+        <pre>
+        <code>
+    # Mostrar a senha gerada
+    print(f"Sua senha gerada é: {senha}")
+        </code>
+        </pre>
+    
+        <p>
+            Esse código usa <strong>print()</strong> para mostrar a senha gerada ao usuário.
+        </p>
+    
+        <h3>Passo 8: Executar o gerador de senhas</h3>
+        <p>
+            Agora que nosso gerador de senhas está pronto, é hora de testá-lo:
+        </p>
+        <p>
+            1. Salve o arquivo <strong>gerador_senhas.py</strong>.<br>
+            2. Abra o terminal (ou prompt de comando) e navegue até a pasta onde você salvou o arquivo.<br>
+            3. Execute o programa digitando o seguinte comando no terminal:
+        </p>
+    
+        <pre>
+        <code>python gerador_senhas.py</code>
+        </pre>
+    
+        <p>
+            O programa solicitará o comprimento da senha e, em seguida, gerará e exibirá a senha para você.
+        </p>
+    
+        <h3>Passo 9: Melhorias adicionais</h3>
+        <p>
+            Aqui estão algumas sugestões para melhorar o gerador de senhas:
+        </p>
+        <p>
+            - Permitir que o usuário escolha se quer incluir símbolos, números ou letras maiúsculas.<br>
+            - Adicionar uma verificação para garantir que a senha tenha pelo menos um caractere de cada tipo (letra, número, símbolo).<br>
+            - Criar uma interface gráfica usando bibliotecas como Tkinter.
+        </p>
+    
+        <hr>
+    
+        <p>
+            Pronto! Você criou um gerador de senhas em Python. Sinta-se à vontade para explorar mais opções e melhorar o projeto!
+        </p>
+
+    </div>
+
+    <script>
+        // Função para exibir um conteúdo e esconder os outros
+        function exibirconteudo(id) {
+            var conteudos = document.querySelectorAll("#FerramentaPY, #Calculadora, #Tutorial2PY, #Tutorial3PY");
+    
+            conteudos.forEach(function(conteudo) {
+                conteudo.style.display = "none"; 
+            });
+    
+            var elemento = document.getElementById(id);
+    
+            if (elemento.style.display === "none" || elemento.style.display === "") {
+                elemento.style.display = "block";
+            }
+        }
+    
+        // Aciona o evento Javascript para carregar o conteúdo inicial da página
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var element = document.getElementById("btnFerramentaPY");
+            element.classList.add("active_nav"); 
+    
+            exibirconteudo('FerramentaPY');
+    
+            let allBtns = document.querySelectorAll("button")
+    
+            // For each button, register an event listener
+            allBtns.forEach(function(elem){
+    
+                elem.addEventListener("click", function(e){
+    
+                    // On click, remove the MyClass on ALL buttons
+                    allBtns.forEach(function(el){
+                        el.classList.remove("active_nav");
+                    });
+    
+                    // Add the class on clicked one
+                    e.target.classList.add("active_nav");
+                })
+            })
+        });
+    </script>
+
+
+    <footer>
+        <p>&copy; 2024 Dijerran Perretto.</p>
+    </footer>
+
+</body>
+</html>

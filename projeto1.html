@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramenta Scratch</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS externo -->
+</head>
+<body>
+
+    <div class="tabcontainer">
+        <nav class="tabs">
+            <a class="tablink" href="missao.html">Missão</a>
+            <a class="tablink active" href="projeto1.html">Scratch</a>
+            <a class="tablink" href="projeto2.html">Python</a>
+            <a class="tablink" href="projeto3.html">JavaScript</a>
+        </nav>
+    </div>
+
+    <!-- Botões com função genérica exibirconteudo() -->
+    <button id="btnFerramentaSCRT" onclick="exibirconteudo('FerramentaSCRT')" class="btn-custom">Conhecendo a ferramenta</button>
+    <button id="btnGatoPula" onclick="exibirconteudo('GatoPula')" class="btn-custom">Gato Pula</button>
+    <button id="btnTutorial2SCRT" onclick="exibirconteudo('Tutorial2SCRT')" class="btn-custom">Jogo de Aventura</button>
+    <button id="btnTutorial3SCRT" onclick="exibirconteudo('Tutorial3SCRT')" class="btn-custom">Pong</button>
+
+    <!-- Conteúdos a serem exibidos/ocultados -->
+    <div id="FerramentaSCRT" style="display: none;">
+        <p>Olá, futuro programador! Que tal criarmos um jogo incrível juntos?</p>
+        <p>Para isso, vamos usar o Scratch, um programa super divertido que 
+        permite você criar seus próprios jogos e animações sem precisar 
+        digitar códigos complicados.</p>
+
+        <h3>O que é o Scratch?</h3>
+
+        <p>Imagine que você está montando um quebra-cabeça gigante. Cada peça 
+        desse quebra-cabeça é um comando que você dá ao computador. No Scratch, 
+        essas peças são bloquinhos coloridos que se encaixam perfeitamente, 
+        como peças de Lego!</p>
+
+        <h3>Vamos começar a brincar!</h3>
+
+        <ol>
+            <li>Acesse o Scratch: Abra o seu navegador e procure por "Scratch" ou 
+            clique no link: <a href="https://scratch.mit.edu/" target="_blank">https://scratch.mit.edu/</a>.</li>
+            <li>Crie um novo projeto: Clique em "Criar" para começar um novo jogo.</li>
+            <li>Conheça a tela: A tela do Scratch tem vários bloquinhos coloridos, 
+            um palco onde os personagens se movem e uma área para você criar 
+            seus personagens.</li>
+        </ol>
+    </div>  
+    
+    <div id="GatoPula" style="display: none;">
+        <h3> Passo 1: Cenario e Personagens</h3>
+        <h4>Crie o cenário:</h4>
+
+            <p>Clique na aba "Cenário" e escolha um fundo legal para o seu jogo. Você pode desenhar o seu próprio ou escolher um dos fundos já prontos.
+            Adicione algumas plataformas: Clique em "Pintar" e desenhe retângulos para as plataformas. Depois, clique em "Novo Sprite" e cole cada plataforma que você desenhou.</p>
+
+            <h4>Crie o personagem:</h4>
+            
+            <p>Clique em "Novo Sprite" e escolha um personagem para ser o seu jogador. Você pode escolher um dos personagens prontos ou desenhar o seu próprio.</p>
+
+       
+        <h3> Passo 2: Movimentação do Personagem</h3>
+
+        <h4>Faça o personagem se mover:</h4>
+
+            <p>Clique no seu personagem e vá para a aba "Scripts".
+            Arraste o bloco "Quando a tecla seta para a direita for pressionada" até a área de scripts.
+            Dentro deste bloco, arraste o bloco "Adiciona 10 a X" para fazer o personagem andar para a direita.
+            Para fazer ele se mover para a esquerda, repita a ação a cima colocando um sinal de - na frente do 10.
+            Para fazer o personage pular, arraste o bloco "Quando a tecla seta para cima for pressionada" adicione 10 a y, para fazer ele descer repita o processo colocando um - na frente do 10</p>
+
+
+            <h4>Adicione a gravidade:</h4>
+            
+           <p>A gravidade faz com que o personagem caia quando não está em uma plataforma. Para adicionar a gravidade, arraste o bloco "repita sempre" e dentro dele coloque o bloco "mude y por -2". Isso fará com que o personagem se mova para baixo (caindo) um pouco a cada momento.</p> 
+            
+           <h4>Faça o personagem parar nas plataformas:</h4>
+            
+            <p> fazer o personagem parar quando encostar em uma plataforma, use o bloco "se tocando <outro sprite> então". Dentro deste bloco, coloque um bloco para parar o movimento para baixo.</p>
+
+        <h3>Passo 3: Obstaculos</h3>
+        
+        <h4>Crie obstáculos:</h4>
+
+        <p> Para deixar o jogo mais divertido, adicione alguns obstáculos, como espinhos ou buracos. Você pode fazer com que o personagem perca uma vida se tocar em um obstáculo.</p>
+
+
+
+        <h3>Melhorando ainda mais:</h3>
+            <p>Você já criou seu primeiro jogo de plataforma! Para deixar o jogo ainda mais legal, você pode adicionar sons, músicas, mais personagens e até mesmo um placar.</p>
+            <h4> Dicas:</h4>
+                <p>Use a sua imaginação: Crie diferentes tipos de plataformas, personagens e obstáculos.</p>
+                    <p>Experimente: Tente diferentes combinações de blocos para ver o que acontece.</p>
+                    <p>Divirta-se: O mais importante é se divertir criando o seu jogo!</p>
+
+                    
+    </div>
+
+    <div id="Tutorial2SCRT" style="display: none;">
+        
+        <h3>Criando um jogo de aventura!</h3>
+
+        <p>Olá futuro programador, dessa vez vamos criar algo diferente, um jogo de aventura! Empolgante não é?</p>
+
+        <h3> Crie o cenário:</h3>
+
+        <p>Escolha um fundo legal para o seu jogo. Pode ser uma floresta, um castelo, um espaço sideral... use a sua criatividade!
+        Adicione elementos ao cenário, como árvores, portas, chaves e outros objetos importantes para a sua história.</p>
+
+        <h3>Crie o personagem:</h3>
+
+        <p>Escolha um personagem que combine com a sua aventura. Pode ser um explorador, um príncipe, um alienígena...
+        Dê um nome ao seu personagem e programe os movimentos básicos (andar para os lados, pular).</p>
+
+       <h3> Crie a história:</h3>
+
+        <p>Pense em uma história interessante para o seu jogo. Onde o seu personagem está? Qual é o seu objetivo? Quais são os desafios que ele vai enfrentar?
+        Divida a história em diferentes fases ou níveis.</p>
+
+
+       <h3>Crie os diálogos:</h3>
+        
+        <p>Use os blocos de fala para criar diálogos entre o seu personagem e outros personagens ou objetos. Isso vai ajudar a contar a história e dar mais vida ao seu jogo.</p>
+        
+        
+        <h3> Os quebra-cabeças:</h3>
+        
+        <p>Quebra-cabeças deixam o jogo mais desafiador e divertido. Você pode criar quebra-cabeças simples, como encontrar uma chave para abrir uma porta, ou mais complexos, como resolver um enigma.
+        Use variáveis:</p>
+        
+        <p>As variáveis são como caixas onde você pode guardar informações, como o número de vidas, a pontuação ou o número de chaves que o jogador encontrou.</p>
+
+        <h3>Dicas:</h3>
+
+        <p>Use a imaginação: Crie uma história única e um mundo cheio de detalhes.
+        Divida o jogo em partes: Comece com uma parte pequena e vá adicionando mais elementos à medida que você avança.
+        Teste o jogo: Peça para seus amigos e familiares testarem o seu jogo e darem sugestões de melhoria.
+        Explore os blocos: O Scratch tem muitos blocos que você pode usar para criar efeitos especiais, sons e animações.</p>
+
+
+    </div>
+
+    <div id="Tutorial3SCRT" style="display: none;">
+        
+        <h2> Criando o Pong!</h2>
+
+        <p>Já pensou em criar um jogo estilo ping pong você mesmo? Abaixo iremos te ensinar como!</p>
+
+        <p>
+            1. Abra o Scratch e faça login (se ainda não tem conta, pode criar uma!).<br>
+            2. No palco (a área onde o jogo acontece), elimine o <strong>Gato do Scratch</strong> clicando na lixeira, pois não vamos precisar dele.<br>
+            3. Clique no ícone <strong>"Escolher um fundo"</strong> no canto inferior direito e selecione um fundo simples, como o "Azul Claro". Esse será o nosso campo de jogo!
+            </p>
+            
+            <h3>Passo 2: Desenhar as Raquetes</h3>
+            
+            <p>
+            1. <strong>Adicione um novo sprite</strong> clicando no ícone de "pincel" (isso permite desenhar). Vamos desenhar as raquetes!<br>
+            2. Desenhe um <strong>retângulo alto e estreito</strong> no centro da área de desenho. Esse será o formato da raquete.<br>
+            3. <strong>Dê o nome</strong> à raquete de "Raquete Esquerda".<br>
+            4. <strong>Duplique a raquete</strong> para criar uma nova. Mude o nome para "Raquete Direita".<br>
+            Agora temos duas raquetes!
+            </p>
+            
+            <h3>Passo 3: Programar o Movimento das Raquetes</h3>
+            
+            <p>
+            <strong>Raquete Esquerda (Jogador 1):</strong><br>
+            1. Vá para a raquete "Raquete Esquerda".<br>
+            2. Clique na aba de <strong>"Código"</strong> e vá à categoria <strong>"Eventos"</strong>. Arraste o bloco <strong>"quando a bandeira verde for clicada"</strong>.<br>
+            3. Em seguida, na categoria <strong>"Controle"</strong>, arraste o bloco <strong>"para sempre"</strong>.<br>
+            4. Na categoria <strong>"Movimento"</strong>, arraste <strong>"vá para y"</strong> e escreva <strong>"y do mouse"</strong>. Isso vai fazer com que a raquete siga o movimento do mouse do jogador 1!
+            </p>
+            
+            <p>
+            <strong>Raquete Direita (Jogador 2):</strong><br>
+            1. Agora vá para a "Raquete Direita".<br>
+            2. Repita o primeiro passo, mas em vez de controlar com o mouse, você vai usar as <strong>setas do teclado</strong>:<br>
+               - Use o bloco <strong>"quando a tecla para cima for pressionada"</strong> e faça a raquete mover-se para cima usando o bloco <strong>"mudar y por 10"</strong>.<br>
+               - Use o bloco <strong>"quando a tecla para baixo for pressionada"</strong> e faça a raquete mover-se para baixo com <strong>"mudar y por -10"</strong>.
+            </p>
+            
+            <h3>Passo 4: Criar a Bola</h3>
+            
+            <p>
+            1. Agora precisamos de uma bola! Clique para adicionar um novo sprite e escolha um <strong>círculo</strong>.<br>
+            2. <strong>Dê o nome</strong> à bola de "Bola".
+            </p>
+            
+            <h3>Passo 5: Programar o Movimento da Bola</h3>
+            
+            <p>
+            1. Vá ao <strong>sprite da bola</strong> e comece com o bloco <strong>"quando a bandeira verde for clicada"</strong>.<br>
+            2. Use um bloco <strong>"para sempre"</strong> (na categoria "Controle") para a bola estar sempre se movendo.<br>
+            3. No separador <strong>"Movimento"</strong>, use o bloco <strong>"mover 10 passos"</strong> para fazer a bola andar.<br>
+            4. Em seguida, arraste o bloco <strong>"se tocar na borda, faça reverter"</strong> (a bola vai "bater" nas paredes e mudar de direção).
+            </p>
+            
+            <h3>Passo 6: Fazer a Bola Reagir às Raquetes</h3>
+            
+            <p>
+            1. Ainda no sprite da bola, use o bloco <strong>"se... então"</strong> da categoria "Controle".<br>
+            2. Dentro desse bloco, coloque o bloco <strong>"tocar na Raquete Esquerda?"</strong> da categoria "Sensores".<br>
+            3. Dentro do <strong>"então"</strong>, use <strong>"aponte em direção a 180 graus"</strong> e a bola vai mudar de direção quando tocar na raquete.<br>
+            4. Faça o mesmo para a <strong>Raquete Direita</strong>.
+            </p>
+            
+            <h3>Passo 7: Adicionar Pontuação</h3>
+            
+            <p>
+            1. <strong>Crie uma variável</strong> chamada "Pontuação Esquerda" para o jogador 1 e outra chamada "Pontuação Direita" para o jogador 2. Você pode encontrar essa opção na categoria <strong>"Variáveis"</strong>.<br>
+            2. Adicione blocos para <strong>aumentar a pontuação</strong> sempre que a bola passar pela raquete de um dos jogadores. Use o bloco <strong>"mudar Pontuação Esquerda/Direita por 1"</strong>.
+            </p>
+            
+            <h3>Passo 8: Reiniciar o Jogo</h3>
+            
+            <p>
+            1. No código da bola, adicione uma condição para reiniciar a bola no centro da tela se ela passar por uma das raquetes (isso acontece com o bloco <strong>"ir para x:0 y:0"</strong>).
+            </p>
+            
+            <h3>Passo 9: Testar e Melhorar!</h3>
+            
+            <p>
+            Agora clique na bandeira verde e experimente jogar! Se tudo estiver funcionando, você pode <strong>melhorar o jogo</strong>:<br>
+            - Adicione <strong>efeitos sonoros</strong> quando a bola tocar nas raquetes ou marcar um ponto.<br>
+            - Desenhe um <strong>placar</strong> para mostrar as pontuações.<br>
+            - Crie uma animação de <strong>fim de jogo</strong> quando um jogador chegar a 10 pontos.
+            </p>
+
+
+
+
+
+
+
+       
+    </div>
+
+    <script>
+        // Função para exibir um conteúdo e esconder os outros
+        function exibirconteudo(id) {
+            var conteudos = document.querySelectorAll("#FerramentaSCRT, #GatoPula, #Tutorial2SCRT, #Tutorial3SCRT");
+    
+            conteudos.forEach(function(conteudo) {
+                conteudo.style.display = "none"; 
+            });
+    
+            var elemento = document.getElementById(id);
+    
+            if (elemento.style.display === "none" || elemento.style.display === "") {
+                elemento.style.display = "block";
+            }
+        }
+    
+        // Aciona o evento Javascript para carregar o conteúdo inicial da página
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var element = document.getElementById("btnFerramentaSCRT");
+            element.classList.add("active_nav"); 
+    
+            exibirconteudo('FerramentaSCRT');
+    
+            let allBtns = document.querySelectorAll("button")
+    
+            // For each button, register an event listener
+            allBtns.forEach(function(elem){
+    
+                elem.addEventListener("click", function(e){
+    
+                    // On click, remove the MyClass on ALL buttons
+                    allBtns.forEach(function(el){
+                        el.classList.remove("active_nav");
+                    });
+    
+                    // Add the class on clicked one
+                    e.target.classList.add("active_nav");
+                })
+            })
+        });
+    </script>
+    
+
+    <footer>
+        <p>&copy; 2024 Dijerran Perretto.</p>
+    </footer>
+
+
+</body>
+</html>
